@@ -41,7 +41,7 @@ A Dockerfile is where we describe how to build an image. It has its own syntax, 
 
 This is the Dockerfile for Laravel that uses PHP 8.3:
 
-<<< ../code/laravel/vendor/laravel/sail/runtimes/8.3/Dockerfile
+<<< ./assets/Dockerfile
 
 The images used on a Dockerfile must be accessible in some way. In the case of the previous Dockerfile it uses hte `ubuntu:22.04` image (we can see this in the first line `FROM ubuntu:22.04`).By default Docker will connect to [Docker Hub](https://hub.docker.com/), a public container registry to download those images.
 
