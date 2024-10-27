@@ -18,41 +18,52 @@ export default defineConfig({
         text: "Tutorials",
         items: [
           {
-            text: "Project",
+            text: "Tools",
             items: [
-              {
-                text: "Connect to the VM",
-                link: "./connect.md",
-              },
-              { text: "Install Components", link: "/install" },
-              { text: "Deploy Code", link: "/deploy" },
-              {
-                text: "Intermediate Submission",
-                link: "./intermediate.md",
-              },
-            ],
-          },
-          {
-            text: "Auxiliary",
-            items: [
-              {
-                text: "IPLeiria - VPN",
-                link: "./vpn.md",
-              },
-              {
-                text: "Laravel Authentication - Passport",
-                link: "./passport.md",
-              },
-              {
-                text: "Web Sockets - SocketIO",
-                link: "./socketio.md",
-              },
               {
                 text: "Windows Subsystem for Linux",
                 link: "./wsl.md",
               },
+              { text: "Docker", link: "/docker" },
+              { text: "Laravel Sail", link: "/sail" },
             ],
           },
+          // {
+          //   text: "Project",
+          //   items: [
+          //     {
+          //       text: "Connect to the VM",
+          //       link: "./connect.md",
+          //     },
+          //     { text: "Install Components", link: "/install" },
+          //     { text: "Deploy Code", link: "/deploy" },
+          //     {
+          //       text: "Intermediate Submission",
+          //       link: "./intermediate.md",
+          //     },
+          //   ],
+          // },
+          // {
+          //   text: "Auxiliary",
+          //   items: [
+          //     {
+          //       text: "IPLeiria - VPN",
+          //       link: "./vpn.md",
+          //     },
+          //     {
+          //       text: "Laravel Authentication - Passport",
+          //       link: "./passport.md",
+          //     },
+          //     {
+          //       text: "Web Sockets - SocketIO",
+          //       link: "./socketio.md",
+          //     },
+          //     {
+          //       text: "Windows Subsystem for Linux",
+          //       link: "./wsl.md",
+          //     },
+          //   ],
+          // },
         ],
       },
       {

@@ -4,17 +4,17 @@ layout: home
 
 hero:
   name: "Project Tutorials"
-  text: "Tutorials related to the DAD 2023/24 course project"
+  text: "Tutorials related to the DAD 2024/25 course"
   actions:
     - theme: brand
-      text: Connect to VM
-      link: /connect
+      text: Windows Subsystem for Linux
+      link: /wsl
     - theme: alt
-      text: Install Components
-      link: /install
+      text: Docker
+      link: /docker
     - theme: alt
-      text: Deploy Code
-      link: /deploy
+      text: Laravel Sail
+      link: /sail
 # features:
 #   - title: Feature A
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -24,6 +24,7 @@ hero:
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<!--
 <div style="max-width: 80%; margin: auto; font-size: 1.4em;">
 <p style="margin-bottom: 10px; line-height:2em;">In this documentation we have a set of tutorials to help us implement the 2023/24 Project.</p>
 
@@ -40,4 +41,4 @@ hero:
 
 <p style="margin-bottom: 10px; line-height:2em;">Follow the the tutorials to connect to the provided VM and set up the Ptoject. Happy Coding.</p>
 
-</div>
+</div> -->
