@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: websocket-server
+  namespace: group1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: websocket-server
+  template:
+    metadata:
+      labels:
+        app: websocket-server
+    spec:
+      containers:
+        - name: web
+          image: registry.172.22.21.107.sslip.io/group1/ws:v1.0.1
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: websocket-server
+  namespace: group1
+spec:
+  ports:
+    - port: 8080
+  selector:
+    app: websocket-server

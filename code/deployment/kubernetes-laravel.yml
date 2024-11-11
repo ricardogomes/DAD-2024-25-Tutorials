@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-app
+  namespace: group1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravel-app
+  template:
+    metadata:
+      labels:
+        app: laravel-app
+    spec:
+      containers:
+        - name: api
+          image: registry.172.22.21.107.sslip.io/group1/api:v1.0.0
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: laravel-app
+  namespace: group1
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: laravel-app

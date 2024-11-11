@@ -1,0 +1,16 @@
+{
+  "name": "websockets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "bun --watch index.js",
+    "start": "bun index.js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  }
+}

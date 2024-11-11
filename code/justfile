@@ -1,0 +1,12 @@
+
+laravel-build-push:
+    docker build -t registry.172.22.21.107.sslip.io/group1/api:v1.0.1 -f ./deployment/DockerfileLaravel ./laravel
+    docker push registry.172.22.21.107.sslip.io/group1/api:v1.0.1
+
+vue-build-push:
+    docker build -t registry.172.22.21.107.sslip.io/group1/web:v1.0.1 -f ./deployment/DockerfileVue ./vue
+    docker push registry.172.22.21.107.sslip.io/group1/web:v1.0.1
+
+ws-build-push:
+    docker build -t registry.172.22.21.107.sslip.io/group1/ws:v1.0.1 -f ./deployment/DockerfileWS ./websockets
+    docker push registry.172.22.21.107.sslip.io/group1/ws:v1.0.1
