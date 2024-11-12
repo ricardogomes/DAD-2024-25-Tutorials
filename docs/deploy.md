@@ -181,3 +181,17 @@ Container may take a bit to get to the `healthy` state but after that would shou
 
 - VUE: [http://web-dad-group-x.172.22.21.101.sslip.io](http://web-dad-group-x.172.22.21.101.sslip.io)
 - Laravel: [http://api-dad-group-x.172.22.21.101.sslip.io](http://web-dad-group-x.172.22.21.101.sslip.io)
+
+## Running commands
+
+We sometimes need to run commands on the containers running in the cluster, one example are the Laravel commands (like migrate), we can by using these commands (X is the group number):
+
+```bash
+
+# get pod name
+kubectl get pods -n dad-group-X -l app=laravel-app
+
+
+kubectl -n dad-group-X exec -it <pod-name> -- php artisan migrate:fresh --seed
+
+```
