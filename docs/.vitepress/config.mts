@@ -17,6 +17,7 @@ export default defineConfig({
       {
         text: "Tutorials",
         items: [
+          { text: "Deploy", link: "/deploy" },
           {
             text: "Tools",
             items: [
@@ -43,27 +44,27 @@ export default defineConfig({
           //     },
           //   ],
           // },
-          // {
-          //   text: "Auxiliary",
-          //   items: [
-          //     {
-          //       text: "IPLeiria - VPN",
-          //       link: "./vpn.md",
-          //     },
-          //     {
-          //       text: "Laravel Authentication - Passport",
-          //       link: "./passport.md",
-          //     },
-          //     {
-          //       text: "Web Sockets - SocketIO",
-          //       link: "./socketio.md",
-          //     },
-          //     {
-          //       text: "Windows Subsystem for Linux",
-          //       link: "./wsl.md",
-          //     },
-          //   ],
-          // },
+          {
+            text: "Auxiliary",
+            items: [
+              {
+                text: "IPLeiria - VPN",
+                link: "./vpn.md",
+              },
+              // {
+              //   text: "Laravel Authentication - Passport",
+              //   link: "./passport.md",
+              // },
+              // {
+              //   text: "Web Sockets - SocketIO",
+              //   link: "./socketio.md",
+              // },
+              // {
+              //   text: "Windows Subsystem for Linux",
+              //   link: "./wsl.md",
+              // },
+            ],
+          },
         ],
       },
       {
@@ -73,20 +74,16 @@ export default defineConfig({
             text: "Infrastructure",
             items: [
               {
-                text: "Nginx Documentation",
-                link: "https://nginx.org/en/docs/",
+                text: "Kubectl Documentation",
+                link: "https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/",
               },
               {
-                text: "MySQL Documentation",
-                link: "https://dev.mysql.com/doc/",
+                text: "Docker Documentation",
+                link: "https://docs.docker.com/reference/cli/docker/",
               },
               {
-                text: "NodeJS Documentation",
-                link: "https://nodejs.org/en/docs",
-              },
-              {
-                text: "PM2 Documentation",
-                link: "https://pm2.keymetrics.io/docs/usage/quick-start/",
+                text: "Justfile",
+                link: "https://github.com/casey/just",
               },
             ],
           },
@@ -95,7 +92,7 @@ export default defineConfig({
             items: [
               {
                 text: "Laravel Documentation",
-                link: "https://laravel.com/docs/10.x/readme",
+                link: "https://laravel.com/docs/11.x",
               },
               {
                 text: "VueJS Documentation",

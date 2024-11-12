@@ -1,12 +1,28 @@
 
-laravel-build-push:
-    docker build -t registry.172.22.21.107.sslip.io/group1/api:v1.0.1 -f ./deployment/DockerfileLaravel ./laravel
-    docker push registry.172.22.21.107.sslip.io/group1/api:v1.0.1
+GROUP := "dad-group-x"
+VERSION := "1.0.0"
 
-vue-build-push:
-    docker build -t registry.172.22.21.107.sslip.io/group1/web:v1.0.1 -f ./deployment/DockerfileVue ./vue
-    docker push registry.172.22.21.107.sslip.io/group1/web:v1.0.1
 
-ws-build-push:
-    docker build -t registry.172.22.21.107.sslip.io/group1/ws:v1.0.1 -f ./deployment/DockerfileWS ./websockets
-    docker push registry.172.22.21.107.sslip.io/group1/ws:v1.0.1
+kubectl-pods:
+    kubectl get pods
+
+replace-group-kubernetes-resources:
+
+
+laravel-build group=GROUP version=VERSION:
+    docker build -t registry.172.22.21.107.sslip.io/{{group}}/api:v{{version}} \
+    -f ./deployment/DockerfileLaravel ./laravel \
+    --build-arg GROUP={{group}} --debug
+laravel-push:
+    docker push registry.172.22.21.107.sslip.io/{{group}}/api:v{{version}}
+
+vue-build:
+    docker build -t registry.172.22.21.107.sslip.io/{{group}}/web:v{{version}} -f ./deployment/DockerfileVue ./vue
+vue-push:
+    docker push registry.172.22.21.107.sslip.io/{{group}}/web:v{{version}}
+
+ws-build:
+    docker build -t registry.172.22.21.107.sslip.io/{{group}}/ws:v{{version}} -f ./deployment/DockerfileWS ./websockets
+
+ws-push:
+    docker push registry.172.22.21.107.sslip.io/{{group}}/ws:v{{version}}

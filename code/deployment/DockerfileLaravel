@@ -1,4 +1,14 @@
+ARG DB_USERNAME=root
+ARG DB_PASSWORD=""
+ARG DB_HOST=mysql
+ARG GROUP="dad-group-x"
+
 FROM dunglas/frankenphp
+
+ARG DB_USERNAME
+ARG DB_PASSWORD
+ARG DB_HOST
+ARG GROUP
 
 RUN install-php-extensions \
     pdo_mysql \
@@ -11,3 +21,12 @@ COPY deployment/Caddyfile /etc/caddy/Caddyfile
 
 COPY . /app
 
+WORKDIR /app
+
+RUN sed -i "s/^DB_USERNAME=.*$/DB_USERNAME=${DB_USERNAME}/" .env \
+    && sed -i "s/^DB_PASSWORD=.*$/DB_PASSWORD=${DB_PASSWORD}/" .env \
+    && sed -i "s/^DB_HOST=.*$/DB_HOST=${DB_HOST}/" .env \
+    && sed -i "s/^SESSION_DOMAIN=.*$/SESSION_DOMAIN=${GROUP}.172.22.21.107.sslip.io/" .env 
+
+RUN chown -R www-data:www-data /app \
+    && chmod -R 755 /app/storage

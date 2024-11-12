@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vue-app
-  namespace: group1
+  namespace: dad-group-x
 spec:
   replicas: 1
   selector:
@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
         - name: web
-          image: registry.172.22.21.107.sslip.io/group1/web:v1.0.0
+          image: registry.172.22.21.107.sslip.io/dad-group-x/web:v1.0.0
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: vue-app
-  namespace: group1
+  namespace: dad-group-x
 spec:
   ports:
     - port: 80

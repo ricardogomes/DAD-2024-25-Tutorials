@@ -6,7 +6,7 @@ RUN bun install
 
 COPY . .
 
-EXPOSE 80
+EXPOSE 8080
 
 ENV APP_PORT=8080
 CMD ["bun", "start"]
