@@ -156,13 +156,13 @@ Before we can publish our Kubernetes resources we need to replace the string 'da
 For Linux | WSL :
 
 ```bash
-find . -name "*.yml" -exec sed -i "s/dad-group-x/dad-group-99/g" {} +; \
+find ./deployment -name "*.yml" -exec sed -i "s/dad-group-x/dad-group-99/g" {} +; \
 ```
 
 For MacOS:
 
 ```bash
-find . -name "*.yml" -exec sed -i '' "s/dad-group-x/dad-group-99/g" {} +; \
+find ./deployment -name "*.yml" -exec sed -i '' "s/dad-group-x/dad-group-99/g" {} +; \
 ```
 
 We can now deploy our resources:
