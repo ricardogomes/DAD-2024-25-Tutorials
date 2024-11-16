@@ -6,8 +6,6 @@ VERSION := "1.0.0"
 kubectl-pods:
     kubectl get pods
 
-replace-group-kubernetes-resources:
-
 
 laravel-build group=GROUP version=VERSION:
     docker build -t registry.172.22.21.107.sslip.io/{{group}}/api:v{{version}} \
