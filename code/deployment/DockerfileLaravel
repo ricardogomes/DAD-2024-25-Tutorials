@@ -23,6 +23,10 @@ COPY . /app
 
 WORKDIR /app
 
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+RUN composer install 
+
 RUN sed -i "s/^DB_USERNAME=.*$/DB_USERNAME=${DB_USERNAME}/" .env \
     && sed -i "s/^DB_PASSWORD=.*$/DB_PASSWORD=${DB_PASSWORD}/" .env \
     && sed -i "s/^DB_HOST=.*$/DB_HOST=${DB_HOST}/" .env \
