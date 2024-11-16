@@ -169,24 +169,24 @@ docker push registry.172.22.21.107.sslip.io/{{group}}/ws:v{{version}}
 
 ### Deploy Resources to Kubernetes Cluster
 
-Before we can publish our Kubernetes resources we need to replace the string 'dad-group-x' in each file with our actual group (group 99 is used in the code examples).
+Before we can publish our Kubernetes resources we need to replace the string 'dad-groupx' in each file with our actual group (group99 is used in the code examples).
 
 For Linux | WSL :
 
 ```bash
-find ./deployment -name "*.yml" -exec sed -i "s/dad-group-x/dad-group-99/g" {} +; \
+find ./deployment -name "*.yml" -exec sed -i "s/dad-groupx/dad-group99/g" {} +; \
 ```
 
 For MacOS:
 
 ```bash
-find ./deployment -name "*.yml" -exec sed -i '' "s/dad-group-x/dad-group-99/g" {} +; \
+find ./deployment -name "*.yml" -exec sed -i '' "s/dad-groupx/dad-group99/g" {} +; \
 ```
 
 We can now deploy our resources:
 
 ```bash
-kubectl apply -f deployment/*.yml
+kubectl apply -f deployment/
 ```
 
 Check the deployment using:
@@ -211,5 +211,14 @@ kubectl get pods -n dad-group-X -l app=laravel-app
 
 
 kubectl -n dad-group-X exec -it <pod-name> -- php artisan migrate:fresh --seed
+
+```
+
+To redeploy the application stack you can run:
+
+```bash
+
+kubectl delete -f deployment
+kubectl apply -f deployment
 
 ```
