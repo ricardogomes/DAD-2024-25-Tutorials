@@ -13,16 +13,16 @@ laravel-build group=GROUP version=VERSION:
     docker build -t registry.172.22.21.107.sslip.io/{{group}}/api:v{{version}} \
     -f ./deployment/DockerfileLaravel ./laravel \
     --build-arg GROUP={{group}} --debug
-laravel-push:
+laravel-push group=GROUP version=VERSION:
     docker push registry.172.22.21.107.sslip.io/{{group}}/api:v{{version}}
 
-vue-build:
+vue-build group=GROUP version=VERSION:
     docker build -t registry.172.22.21.107.sslip.io/{{group}}/web:v{{version}} -f ./deployment/DockerfileVue ./vue
-vue-push:
+vue-push group=GROUP version=VERSION:
     docker push registry.172.22.21.107.sslip.io/{{group}}/web:v{{version}}
 
-ws-build:
+ws-build group=GROUP version=VERSION:
     docker build -t registry.172.22.21.107.sslip.io/{{group}}/ws:v{{version}} -f ./deployment/DockerfileWS ./websockets
 
-ws-push:
+ws-push group=GROUP version=VERSION:
     docker push registry.172.22.21.107.sslip.io/{{group}}/ws:v{{version}}
