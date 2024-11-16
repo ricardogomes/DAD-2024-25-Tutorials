@@ -109,6 +109,24 @@ Assuming we have a deployment folder in the same place as this tutorial reposito
 
 One important **NOTE** is that Kubernetes will depend on us naming the versions of our apps to re-deploy them when we change our code, so keep in mind that we need to bump the version each time we want to push a new version of our applications.
 
+### Configure Docker
+
+Our Docker Registry does not use HTTPS so we ned to inform Docker that this registry is only available on port 80.
+
+This is the configuration we need (this is a JSON property to be included into either existing configuration or a new JSON config by wrapping it in { }):
+
+```json
+
+    "insecure-registries" : [ "registry.172.22.21.107.sslip.io" ]
+
+```
+
+On Windows and MacOS the simples way is to configure this via Docker Desktop.
+
+![Docker Insecure Registries](assets/docker-insecure-registries.png)
+
+On linux we can edit the file directly via `sudo nano /etc/docker/daemon.json` and restart the service via `sudo systemctl restart docker`.
+
 ### Push Images to Container Repository
 
 Build the Laravel Image (replace group with your group id - dad-group-X and the version with the current version - 1.0.0):
