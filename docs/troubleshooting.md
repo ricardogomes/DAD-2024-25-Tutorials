@@ -34,6 +34,16 @@ Copy the .kube folder to your user folder on the Windows side (`C:/Users/<user>`
 
 This utility is used to push Kubernetes resources to our cluster, and we only need the yaml files inside the `deployment` folder on the tutorial repository. Copy those files to anywhere on Windows, make sure you have the proper versions of the apps, and run the apply command.
 
+**NOTE:** untested solution
+
+Run this inside WSL ([more info](https://stackoverflow.com/questions/59958274/unable-to-connect-to-the-server-net-http-tls-handshake-timeout)):
+
+```bash
+
+sudo ip link set dev eth0 mtu 1350
+
+```
+
 ### `docker push` using HTTPS
 
 ![docker push HTTPS](./assets/dad-issue-2.png)
