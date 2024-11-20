@@ -197,8 +197,8 @@ kubectl get pods
 
 Container may take a bit to get to the `healthy` state but after that would should be able to reach your application at:
 
-- VUE: [http://web-dad-group-x.172.22.21.101.sslip.io](http://web-dad-group-x.172.22.21.101.sslip.io)
-- Laravel: [http://api-dad-group-x.172.22.21.101.sslip.io](http://web-dad-group-x.172.22.21.101.sslip.io)
+- VUE: [http://web-dad-group-x-172.22.21.101.sslip.io](http://web-dad-group-x-172.22.21.101.sslip.io)
+- Laravel: [http://api-dad-group-x-172.22.21.101.sslip.io](http://web-dad-group-x-172.22.21.101.sslip.io)
 
 ## Running commands
 

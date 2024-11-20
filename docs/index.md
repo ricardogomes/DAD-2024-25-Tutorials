@@ -10,8 +10,8 @@ hero:
       text: DAD Project Deploy
       link: /deploy
     - theme: alt
-      text: WSL
-      link: /wsl
+      text: DAD Project Troubleshooting
+      link: /troubleshooting
     - theme: alt
       text: Laravel Sail
       link: /sail
