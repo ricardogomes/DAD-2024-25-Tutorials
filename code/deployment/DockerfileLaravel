@@ -30,7 +30,7 @@ RUN composer install
 RUN sed -i "s/^DB_USERNAME=.*$/DB_USERNAME=${DB_USERNAME}/" .env \
     && sed -i "s/^DB_PASSWORD=.*$/DB_PASSWORD=${DB_PASSWORD}/" .env \
     && sed -i "s/^DB_HOST=.*$/DB_HOST=${DB_HOST}/" .env \
-    && sed -i "s/^SESSION_DOMAIN=.*$/SESSION_DOMAIN=${GROUP}.172.22.21.107.sslip.io/" .env 
+    && sed -i "s/^SESSION_DOMAIN=.*$/SESSION_DOMAIN=${GROUP}-172.22.21.107.sslip.io/" .env 
 
 RUN chown -R www-data:www-data /app \
     && chmod -R 755 /app/storage

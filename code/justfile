@@ -1,6 +1,6 @@
 
-GROUP := "dad-group-x"
-VERSION := "1.0.0"
+GROUP := "dad-group-2"
+VERSION := "1.0.10"
 
 
 kubectl-pods:
@@ -17,7 +17,7 @@ kubectl-update:
 laravel-build group=GROUP version=VERSION:
     docker build -t registry.172.22.21.107.sslip.io/{{group}}/api:v{{version}} \
     -f ./deployment/DockerfileLaravel ./laravel \
-    --build-arg GROUP={{group}} --debug
+    --build-arg GROUP={{group}}
 laravel-push group=GROUP version=VERSION:
     docker push registry.172.22.21.107.sslip.io/{{group}}/api:v{{version}}
 
