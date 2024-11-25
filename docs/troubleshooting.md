@@ -48,6 +48,12 @@ sudo ip link set dev eth0 mtu 1350
 
 ![docker push HTTPS](./assets/dad-issue-2.png)
 
+**UPDATE** The is another solution provided by one of the students:
+
+Configure docker to not use containerd to push images by going to the Docker Desktop configs, choosing _General_ and unticking the box.
+
+![docker push issue - disable containerd](./assets/docker-push-issue-1.png)
+
 Even with the `insecure-registries` configuration on Docker the docker pull command still tries to communicate with the registry using HTTPS, which we cannot set up due to the lack of valid certificates.
 
 Unfortunately we still haven't got a solution to this one. The workaround that is working for some groups is having another member of the group run this commands.
