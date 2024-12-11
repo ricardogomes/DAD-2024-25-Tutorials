@@ -13,6 +13,7 @@ spec:
       labels:
         app: mysql
     spec:
+      priorityClassName: high-priority
       containers:
         - name: mysql
           image: mysql:8.0
@@ -23,6 +24,14 @@ spec:
               value: "project"
           ports:
             - containerPort: 3306
+          resources:
+            requests:
+              memory: "384Mi"
+              cpu: "200m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+
 ---
 apiVersion: v1
 kind: Service

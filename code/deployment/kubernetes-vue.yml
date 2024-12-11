@@ -14,9 +14,17 @@ spec:
       labels:
         app: vue-app
     spec:
+      priorityClassName: low-priority
       containers:
         - name: web
           image: registry.172.22.21.107.sslip.io/dad-group-x/web:v1.0.0
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
 
 ---
 apiVersion: v1

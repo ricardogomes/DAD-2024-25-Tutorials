@@ -2,5 +2,8 @@
   pkgs.mkShell {
     nativeBuildInputs = with pkgs.buildPackages; [ 
         bun
+        kubectl
     ];
+
+  KUBECONFIG = "./.kube/config";
 }

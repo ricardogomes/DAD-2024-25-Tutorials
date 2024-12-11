@@ -1,3 +1,5 @@
 .kube
+justfile_teachers
+deployment_teachers
 testing
 testing/**

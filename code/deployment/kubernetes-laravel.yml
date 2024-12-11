@@ -14,9 +14,17 @@ spec:
       labels:
         app: laravel-app
     spec:
+      priorityClassName: high-priority
       containers:
         - name: api
           image: registry.172.22.21.107.sslip.io/dad-group-x/api:v1.0.0
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "300m"
 
 ---
 apiVersion: v1
