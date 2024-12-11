@@ -18,6 +18,8 @@ export default defineConfig({
         text: "Tutorials",
         items: [
           { text: "Deploy", link: "/deploy" },
+          { text: "Troubleshooting", link: "/troubleshooting" },
+          { text: "Changes", link: "/changes" },
           {
             text: "Tools",
             items: [

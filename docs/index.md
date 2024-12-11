@@ -12,9 +12,9 @@ hero:
     - theme: alt
       text: DAD Project Troubleshooting
       link: /troubleshooting
-    - theme: alt
-      text: Laravel Sail
-      link: /sail
+    - theme: brand
+      text: DAD Project Mandatory Changes
+      link: /changes
 ---
 
 <div style="max-width: 80%; margin: auto; font-size: 1.4em; text-align:center;">
