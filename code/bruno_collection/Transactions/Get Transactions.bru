@@ -1,16 +1,15 @@
 meta {
-  name: Get Auth User
+  name: Get Transactions
   type: http
-  seq: 2
+  seq: 1
 }
 
 get {
-  url: {{api_url}}/users/me
+  url: {{api_url}}/transactions
   body: none
   auth: none
 }
 
 headers {
-  Accept: application/json
   Authorization: Bearer {{token}}
 }

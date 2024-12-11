@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://localhost:8085/api/auth/login
+  url: {{api_url}}/auth/login
   body: json
   auth: none
 }
@@ -19,5 +19,5 @@ body:json {
 
 tests {
   let data = res.getBody();
-  bru.setEnvVar("token",data.auth_token);
+  bru.setEnvVar("token",data.token);
 }
