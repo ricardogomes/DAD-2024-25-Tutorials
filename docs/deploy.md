@@ -134,7 +134,7 @@ Build the Laravel Image (replace group with your group id - dad-group-X and the 
 ```bash
 docker build -t registry.172.22.21.107.sslip.io/{{group}}/api:v{{version}} \
     -f ./deployment/DockerfileLaravel ./laravel \
-    --build-arg GROUP={{group}} --debug
+    --build-arg GROUP={{group}}
 ```
 
 Push the Laravel Image (replace group with your group id - dad-group-X and the version with the current version - 1.0.0):
