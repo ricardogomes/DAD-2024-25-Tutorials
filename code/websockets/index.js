@@ -7,7 +7,7 @@ const io = require("socket.io")(httpServer, {
   },
 });
 
-const PORT = process.env.APP_PORT || 8086;
+const PORT = process.env.APP_PORT || 8080;
 
 httpServer.listen(PORT, () => {
   console.log(`listening on localhost:${PORT}`);
